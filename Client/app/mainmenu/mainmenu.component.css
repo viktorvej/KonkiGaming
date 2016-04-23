@@ -1,0 +1,27 @@
+nav {
+   background: #1d1d1d;
+   background: rgba(0,0,0,0.6);
+   font-size: 0.9rem;
+}
+
+ul {
+    margin-left: 100px;
+}
+
+li {
+    padding: 0 10px;    
+}
+
+li a{
+    color: #fff;
+}
+
+li a:hover {
+    color: #aaa;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}

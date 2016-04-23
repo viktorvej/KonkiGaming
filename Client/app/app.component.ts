@@ -1,13 +1,15 @@
 import { Component } from 'angular2/core';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 @Component({
-    selector: 'konki-app',
+    selector: 'kg-app',
     template: `
     <div>
-        <h1>{{pageTitle}}</h1>
-        <div>My first component</div>
+        <kg-mainmenu></kg-mainmenu>
     </div>
-    `
+    `,
+    styleUrls: ['app/app.component.css'],
+    directives: [MainmenuComponent]
 })
 export class AppComponent {
     pageTitle: string = "Konki Gaming";
