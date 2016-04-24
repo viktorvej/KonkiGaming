@@ -1,0 +1,31 @@
+<div id="headerCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li *ngFor="#image of images; #i = index" 
+            data-target="#headerCarousel"
+            [attr.data-slide-to]="i"
+            [ngClass]="{active: i === activeImage}"
+            (click)="setActiveImage(i)"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+    <div *ngFor="#image of images; #i = index" class="carousel-item"
+            [ngClass]="{active: i === activeImage}">
+        <img [src]="image.imgSrc" [alt]="image.title">
+        <div class="container">
+        <div class="carousel-caption text-xs-left">
+            <h1>{{image.title}}</h1>
+            <p>{{image.description}}</p>
+            <p><a class="btn btn-lg btn-primary" role="button">{{image.link}}</a></p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <a class="left carousel-control" data-target="#headerCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" data-target="#headerCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
